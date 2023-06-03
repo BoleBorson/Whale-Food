@@ -8,7 +8,7 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
+        <li><a href="/app/recipes">Recipes</a></li>
         <li tabindex="0">
           <a>
             Receipts
@@ -22,6 +22,6 @@
         <li><a>Item 3</a></li>
       </ul>
     </div>
-  </div>
+</div>
 
-  <slot/>
+<slot/>
