@@ -19,7 +19,7 @@
             <li><a>Submenu 2</a></li>
           </ul>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a href="/app/inventory">Inventory</a></li>
       </ul>
     </div>
 </div>
