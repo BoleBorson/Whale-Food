@@ -59,6 +59,15 @@ async def extract_text(file: UploadFile = File(...), charge: str = Form(...), to
 
     return JSONResponse(content={"status": "success"})
 
+@app.get("/rec-stats")
+async def rec_stats():
+    recs = client.collection("receipts").get_list()
+    
+    print(recs.items)
+
+            
+
+    return JSONResponse(content={"status": "success"})
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

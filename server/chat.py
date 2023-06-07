@@ -2,7 +2,7 @@ import openai
 import json
 
 openai.organization = "org-Q0ykhTU2Crpdy2XGZ4nAbhOi"
-openai.api_key = "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"
+openai.api_key = "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"
 
 def format_receipt(receipt_text):
     res = openai.ChatCompletion.create(
