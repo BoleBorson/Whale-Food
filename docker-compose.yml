@@ -8,6 +8,8 @@ services:
     command: uvicorn main:app --host 0.0.0.0
     ports:
       - 8000:8000
+    depends_on:
+      - db
   web:
     build: ./web/.
     # command: npm run serve
