@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
 
-client = PocketBase('http://localhost:8090')
+client = PocketBase('http://192.168.1.225:8090')
 
 # authenticate as regular user
 user_data = client.collection("users").auth_with_password("joe", "joejoejoe")
