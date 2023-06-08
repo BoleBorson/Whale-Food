@@ -93,7 +93,7 @@
       formData.append('token', pb.authStore.model?.id)
 
       try {
-        const response = await fetch('http://localhost:8000/extract_text', {
+        const response = await fetch('http://localhost:9000/extract_text', {
           method: 'POST',
           body: formData,
         //   headers: {
