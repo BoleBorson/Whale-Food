@@ -4,6 +4,7 @@
   import { notifications } from '$lib/notifications.js'
   import Toast from '$lib/Toast.svelte'
   import RecImgModel from '$lib/RecImgModel.svelte';
+  import { PUBLIC_SERVER, PUBLIC_POCKET } from '$env/static/public';
 
   interface record {
     expand: {
@@ -52,7 +53,7 @@
 
   const setData = (d) => {
     data = d
-    recImg = `http://localhost:8090/api/files/receipts/${d.id}/${d.rec}`
+    recImg = `http://${PUBLIC_POCKET}/api/files/receipts/${d.id}/${d.rec}`
     console.log("The data we are looking for", {data})
   }
 
@@ -93,7 +94,7 @@
       formData.append('token', pb.authStore.model?.id)
 
       try {
-        const response = await fetch('http://localhost:9000/extract_text', {
+        const response = await fetch(``http`://${PUBLIC_SERVER}/extract_text`, {
           method: 'POST',
           body: formData,
         //   headers: {

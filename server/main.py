@@ -9,8 +9,12 @@ from pocketbase import PocketBase  # Client also works the same
 from pocketbase.client import FileUpload
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from dotenv import load_dotenv
+import os
 
-client = PocketBase('http://localhost:8090')
+load_dotenv()
+
+client = PocketBase('http://{0}:8090'.format(os.environ.get('POCKET')))
 
 # authenticate as regular user
 user_data = client.collection("users").auth_with_password("joe", "joejoejoe")
