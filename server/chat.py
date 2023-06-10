@@ -1,8 +1,12 @@
 import openai
 import json
+from dotenv import load_dotenv
+import os
 
-openai.organization = "org-Q0ykhTU2Crpdy2XGZ4nAbhOi"
-openai.api_key = "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"
+load_dotenv()
+
+openai.organization = os.environ.get('CHAT_ORG') 
+openai.api_key = os.environ.get('CHAT_API_KEY')
 
 def format_receipt(receipt_text):
     res = openai.ChatCompletion.create(
