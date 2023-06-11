@@ -15,9 +15,12 @@ import os
 load_dotenv()
 
 client = PocketBase('http://{0}:8090'.format(os.environ.get('POCKET')))
+# client = PocketBase('http://localhost:8090')
+print("CONNECTING")
 
 # authenticate as regular user
 user_data = client.collection("users").auth_with_password("joe", "joejoejoe")
+print("BROKEN"*10)
 
 app = FastAPI()
 

@@ -94,7 +94,7 @@
       formData.append('token', pb.authStore.model?.id)
 
       try {
-        const response = await fetch(``http`://${PUBLIC_SERVER}/extract_text`, {
+        const response = await fetch(`http://${PUBLIC_SERVER}/extract_text`, {
           method: 'POST',
           body: formData,
         //   headers: {

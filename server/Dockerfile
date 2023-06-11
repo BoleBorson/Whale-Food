@@ -6,9 +6,7 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt ./requirements.txt
-COPY chat.py .
-COPY main.py .
+COPY . .
 
 RUN apt update
 RUN apt install tesseract-ocr -y

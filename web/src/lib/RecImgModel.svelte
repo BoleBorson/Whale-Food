@@ -2,7 +2,7 @@
 
     export let img;
     export let id;
-
+    import { PUBLIC_POCKET } from '$env/static/public';
     console.log(id)
 
 
@@ -16,7 +16,7 @@
 <label for={id} class="modal cursor-pointer">
   <label class="modal-box relative" for="">
     <div class="flex justify-center">
-        <img src={`http://localhost:8090/api/files/receipts/${id}/${img}`} alt="">
+        <img src={`http://${PUBLIC_POCKET}/api/files/receipts/${id}/${img}`} alt="">
     </div>
   </label>
 </label>
