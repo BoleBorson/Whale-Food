@@ -14,7 +14,7 @@ services:
     build: ./web/.
     # command: npm run serve
     ports:
-      - 80:5173
+      - 7080:5173
     depends_on:
       - server
   db:
