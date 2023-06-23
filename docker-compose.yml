@@ -17,7 +17,14 @@ services:
       - 80:5173
     depends_on:
       - server
-  # db:
-  #   build: ./db/.
-  #   ports:
-  #     - 8090:8090
+  db:
+    build: ./db/.
+    ports:
+      - 8090:8090
+    volumes:
+      - pb_data_vol:/pb_data
+      - pb_mig_dta_vol:/pb_migrations
+
+volumes:
+  pb_data_vol:
+  pb_mig_dta_vol:
