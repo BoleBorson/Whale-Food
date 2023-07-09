@@ -1,17 +1,4 @@
-# FROM node:20 AS build
-
-# WORKDIR /app
-
-# COPY package.json ./
-# COPY package-lock.json ./
-# RUN npm install
-# COPY . ./
-# RUN npm run build
-
-# FROM nginx:1.19-alpine
-# COPY --from=build /app/build /usr/share/nginx/html
-
-FROM node:19
+FROM node AS build
 
 WORKDIR /app
 
@@ -19,5 +6,9 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
 COPY . ./
-EXPOSE 5173
-CMD ["npm", "run", "dev", "--", "--host", "--port", "5173"]
+RUN npm run build
+
+FROM nginx
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=build /app/build .

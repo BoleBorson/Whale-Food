@@ -1,12 +1,1 @@
-<script>
-    import { pb } from '$lib/pocketbase.js'
-    import { goto } from '$app/navigation';
-    import { onMount } from 'svelte';
-
-    onMount(() => {
-        goto("/login")
-    })
-</script>
-onMount(() => {
-    goto("/login")
-})
+<h1></h1>

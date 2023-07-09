@@ -7,16 +7,13 @@ services:
     build: ./server/.
     command: uvicorn main:app --host 0.0.0.0
     ports:
-      - 9000:8000
-    # depends_on:
-    #   - db
+      - 8000:8000
+    depends_on:
+      - db
   web:
     build: ./web/.
-    # command: npm run serve
     ports:
-      - 7080:5173
-    depends_on:
-      - server
+      - 80:80
   db:
     build: ./db/.
     ports:
