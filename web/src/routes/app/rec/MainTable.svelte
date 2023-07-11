@@ -2,6 +2,7 @@
     import { pb } from "$lib/pocketbase.js";
     import { onMount } from "svelte";
     import RecImgModel from "$lib/RecImgModal.svelte";
+    import { notifications } from "$lib/notifications.js";
 
     export let setData;
 
@@ -9,7 +10,10 @@
 
     const deleteRec = async (id) => {
         records = records.filter((obj) => obj.id !== id);
-        await pb.collection("receipts").delete(id);
+        await pb.collection("receipts").delete(id)
+        .then(() => {
+            notifications.success("Receipt deleted", 1000)
+        })
     };
 
     const formatDate = (ds) => {

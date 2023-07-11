@@ -45,7 +45,9 @@
 
 </script>
 
-<div class="flex justify-center gap-5">
+<h1 class="text-3xl font-bold text-center p-10">Shopping List</h1>
+
+<div class="flex justify-center gap-5 pb-5">
     <div>
         <button on:click={add} class="btn btn-success">add item</button>
     </div>

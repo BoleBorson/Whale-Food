@@ -41,7 +41,7 @@
                         <li><a href="/app/rec-a">Receipt Statistics</a></li>
                     </ul>
                 </li>
-                <!-- <li><a>Item 3</a></li> -->
+                <li><a href="/app/cards">Store Cards</a></li>
             </ul>
         </div>
         <a class="btn btn-ghost normal-case text-xl">Whale Food</a>
@@ -58,7 +58,7 @@
                     </ul>
                 </details>
             </li>
-            <!-- <li><a>Item 3</a></li> -->
+            <li><a href="/app/cards">Store Cards</a></li>
         </ul>
     </div>
     <div class="navbar-end">

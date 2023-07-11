@@ -113,8 +113,8 @@
 
 <Drawer  on:clickAway={() => open = false} { open } size='90%'>
     <div class="bg-black h-full overflow-y-scroll">
-        <div class="flex justify-end p-5 text-2xl">
-            <button on:click={() => open = false}>X close</button>
+        <div class="absolute right-10 top-10">
+            <button class="btn btn-error" on:click={() => open = false}>X close</button>
         </div>
         <DrawerContent {recImg} {data} />
     </div>

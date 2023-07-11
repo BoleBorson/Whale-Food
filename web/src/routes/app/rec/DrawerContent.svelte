@@ -52,7 +52,7 @@
     };
 </script>
 
-<div class="">
+<div class="p-5">
     <div class="w-full stats bg-primary text-primary-content mb-5">
         <div class="stat">
             <div class="stat-title">Store</div>
@@ -142,7 +142,7 @@
             </div>
         </div>
         <div class="flex justify-center p-5">
-            <button on:click={updateRec} class="btn btn-primary w-full ">Save Changes</button>
+            <button on:click={updateRec} class="btn btn-success w-full ">Save Changes</button>
         </div>
     </div>
 </div>
